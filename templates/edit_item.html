@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<h1> Edit Menu Item </h1>
+
+<form action="{{url_for('editItem', item_id = i.item_id)}}" method = 'post'>
+
+	<input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+
+<p> Name: </p>
+
+		<input type = 'text' size = '30' name = 'name' placeholder = '{{i.item}}'>
+
+		<input type = 'submit' value = 'Edit'>
+
+		<a href = '{{url_for('show')}}'> Cancel </a>
+
+
+
+
+
+
+
+
+{% endblock %}

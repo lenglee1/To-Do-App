@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<div class="header">
+	<div="container">
+		<h1> All To Do Items - Descending Order </h1>
+	</div>
+</div>
+
+
+
+
+<ul>
+	{% for o in object %}
+		<li>{{ o.item_id }}. {{ o.item }} </li>
+
+	{% endfor %}
+</ul>
+
+
+<br>
+<h4> <a href='/'> Add another to do item </a></h4> 
+<br>
+<h4> <a href='/show'> Order to do list in ascending order </a></h4>
+
+
+{% endblock %}

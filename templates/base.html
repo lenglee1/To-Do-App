@@ -1,0 +1,33 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}LL To Do App{% endblock %}
+
+{% block navbar %}
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<h1><a href='/'> To Do App </a></h1>
+			</div>
+		</div>
+	</div>
+</body>
+<hr>
+
+{% endblock %}
+
+
+{% block styles %}
+    {{super()}} 
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='main.css')}}">
+{% endblock %}
+
+{% block content %}
+
+	{% block page_content %}
+	{% endblock %}
+
+{% endblock %}
+
+

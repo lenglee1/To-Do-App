@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<div class="header">
+	<div="container">
+		<h1> All To Do Items - Ascending Order</h1>
+	</div>
+</div>
+
+
+
+
+<ul>
+	{% for o in object %}
+		<li>{{ o.item_id }}. {{ o.item }} </li>
+		<a href='{{url_for('editItem', item_id=o.item_id)}}' >Edit</a>
+		<a href='{{url_for('deleteItem', item_id=o.item_id)}}' >Delete</a>
+
+	{% endfor %}
+</ul>
+
+<br>
+<h4> <a href='/'> Add another to do item </a></h4> 
+<br>
+<h4> <a href='/show_reverse'> Order to do list in descending order </a></h4>
+
+
+{% endblock %}
